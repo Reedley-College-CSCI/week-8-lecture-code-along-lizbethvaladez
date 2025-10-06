@@ -1,4 +1,4 @@
-//Lizbeth Valadez - 
+//Lizbeth Valadez 
 //10 - 6 - 25
 #include <iostream>
 using namespace std;
@@ -22,6 +22,30 @@ int main() {
     showDrive();
     //display memory of array
     cout << "Array memory: ~" << sizeof(yards) << " bytes" << endl;
+    cout << "All yards: ";
+
+    for (int val : yards) {
+        cout << val << " ";
+
+    } cout << endl;
+
+    double total = 0;
+    for (int val : yards) {
+        total += val;
+    }
+
+    cout << "Total yards: " << total << endl;
+    cout << "Average yards: " << total / SIZE << endl;
+
+    // find longest drive in yards
+    int maxYards = yards[0];
+    for (int i = 1; i < SIZE; i++) {
+        if (yards[i] > maxYards)
+            maxYards = yards[i];
+    }
+
+
+    cout << "Longest driev: " << maxYards << " yards" << endl;
 
     return 0;
 }
